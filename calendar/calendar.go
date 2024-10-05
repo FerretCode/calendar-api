@@ -70,7 +70,7 @@ func GenerateCalendar(events []Event) ([]byte, error) {
 
 	err := drawEvents(dc, events, daysOfWeek, margin)
 	if err != nil {
-		panic(err)
+		return []byte{}, err
 	}
 
 	out := new(bytes.Buffer)
